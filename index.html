@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electricity Bill Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="brand">
+        <div class="logo">⚡</div>
+        <div>
+            <h2>Electricity Bill Management</h2>
+            <p>SMART BILLING SYSTEM</p>
+        </div>
+    </div>
+    <div class="nav-info">Customer Billing Portal</div>
+</nav>
+
+<div class="container">
+
+    <div class="heading">
+        <h1>Billing Dashboard</h1>
+        <p>Manage customer electricity bills easily and efficiently.</p>
+    </div>
+
+    <div class="dashboard">
+
+        <!-- CUSTOMER FORM -->
+        <div class="card form-card">
+
+            <div class="card-title">
+                <div class="icon">👤</div>
+                <h3>Customer Information</h3>
+            </div>
+
+            <div class="form-group">
+                <label>Customer Name</label>
+                <input type="text" id="name" placeholder="Enter full name">
+            </div>
+
+            <div class="form-group">
+                <label>Customer ID</label>
+                <input type="text" id="customer" placeholder="e.g. EB-101">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Previous Reading</label>
+                    <input type="number" id="previous" min="0" placeholder="1200">
+                </div>
+
+                <div class="form-group">
+                    <label>Current Reading</label>
+                    <input type="number" id="current" min="0" placeholder="1350">
+                </div>
+            </div>
+
+            <div class="reading-info">
+                ⚡ Unit Consumed:
+                <strong id="liveUnits">0 Units</strong>
+            </div>
+
+            <div class="form-group">
+                <label>Billing Month</label>
+                <select id="month">
+                    <option>November 2026</option>
+                    <option>December 2026</option>
+                    <option>January 2027</option>
+                    <option>February 2027</option>
+                    <option>March 2027</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Status</label>
+                <select id="paymentStatus">
+                    <option value="Unpaid">Unpaid</option>
+                    <option value="Paid">Paid</option>
+                </select>
+            </div>
+
+            <button class="generate-btn" onclick="generateBill()">
+                Generate Bill →
+            </button>
+
+        </div>
+
+        <!-- BILL PREVIEW -->
+        <div class="card preview-card">
+
+            <div class="card-title">
+                <div class="icon">🧾</div>
+                <h3>Bill Summary</h3>
+            </div>
+
+            <div class="preview">
+
+                <div class="preview-header">
+                    <h3>Electricity Invoice</h3>
+                    <span class="live">LIVE PREVIEW</span>
+                </div>
+
+                <div class="customer-box">
+                    <p>Customer Name</p>
+                    <h4 id="rname">Your Name</h4>
+
+                    <p style="margin-top:10px">Customer ID</p>
+                    <h4 id="rid">Not Provided</h4>
+
+                    <p style="margin-top:10px">Billing Month</p>
+                    <h4 id="rmonth">November 2026</h4>
+                </div>
+
+                <div class="bill-row">
+                    <span>Consumed Units</span>
+                    <strong id="runits">0 Units</strong>
+                </div>
+
+                <div class="bill-row">
+                    <span>Electricity Charge</span>
+                    <strong id="rcharge">৳0.00</strong>
+                </div>
+
+                <div class="bill-row">
+                    <span>Service Charge</span>
+                    <strong>৳50.00</strong>
+                </div>
+
+                <div class="bill-row">
+                    <span>VAT (5%)</span>
+                    <strong id="rvat">৳2.50</strong>
+                </div>
+
+                <div class="total-box">
+                    <p>TOTAL PAYABLE AMOUNT</p>
+                    <h2 id="rtotal">৳52.50</h2>
+                </div>
+
+                <div class="status-row">
+                    <span>Payment Status</span>
+                    <span class="status" id="rstatus">UNPAID</span>
+                </div>
+
+                <button class="print-btn" onclick="window.print()">
+                    🖨 Print Invoice
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    Electricity Bill Management System
+    <br><br>
+    Academic Software Development Project
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f6f5;
+    color: #263746;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #102a43;
+    color: white;
+    padding: 17px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    background: #16a085;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.brand h2 {
+    font-size: 19px;
+}
+
+.brand p {
+    font-size: 10px;
+    color: #b7c9d5;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+}
+
+.nav-info {
+    font-size: 13px;
+    color: #d4e2e9;
+}
+
+/* MAIN */
+.container {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.heading {
+    margin-bottom: 25px;
+}
+
+.heading h1 {
+    font-size: 27px;
+    color: #102a43;
+    margin-bottom: 7px;
+}
+
+.heading p {
+    color: #778692;
+    font-size: 14px;
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 5px 22px #102a4310;
+    border: 1px solid #e8eeeb;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 23px;
+}
+
+.card-title .icon {
+    width: 38px;
+    height: 38px;
+    background: #e5f5ef;
+    color: #16a085;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-size: 19px;
+}
+
+.card-title h3 {
+    font-size: 17px;
+    color: #102a43;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #425466;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #dce5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    color: #263746;
+    background: white;
+}
+
+input:focus, select:focus {
+    border-color: #16a085;
+    box-shadow: 0 0 0 3px #16a08515;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.reading-info {
+    background: #f0f8f5;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #177b64;
+    margin: 15px 0;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 13px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.generate-btn {
+    width: 100%;
+    background: #16a085;
+    color: white;
+}
+
+.generate-btn:hover {
+    background: #11836d;
+}
+
+/* BILL PREVIEW */
+.preview {
+    background: #f8fbfa;
+    border: 1px solid #e3ebe7;
+    border-radius: 11px;
+    padding: 20px;
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.preview-header h3 {
+    color: #102a43;
+    font-size: 17px;
+}
+
+.live {
+    font-size: 11px;
+    color: #16a085;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.live::before {
+    content: "● ";
+}
+
+.customer-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    border: 1px solid #e8eeeb;
+}
+
+.customer-box p {
+    font-size: 13px;
+    color: #788994;
+    margin-bottom: 6px;
+}
+
+.customer-box h4 {
+    font-size: 16px;
+    color: #102a43;
+    overflow-wrap: anywhere;
+}
+
+.bill-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5ece8;
+    font-size: 13px;
+}
+
+.bill-row span {
+    color: #667782;
+}
+
+.bill-row strong {
+    color: #263746;
+}
+
+.total-box {
+    background: #102a43;
+    color: white;
+    padding: 19px;
+    border-radius: 9px;
+    margin-top: 18px;
+}
+
+.total-box p {
+    font-size: 12px;
+    color: #bdcbd5;
+}
+
+.total-box h2 {
+    font-size: 29px;
+    margin-top: 7px;
+    color: #62d6ae;
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 17px;
+    font-size: 13px;
+}
+
+.status {
+    background: #fff2d9;
+    color: #a66a00;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.paid {
+    background: #ddf5e9;
+    color: #16804e;
+}
+
+.print-btn {
+    width: 100%;
+    margin-top: 18px;
+    background: #e8f5f0;
+    color: #137b64;
+}
+
+.print-btn:hover {
+    background: #d6eee4;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 30px 10px;
+    color: #87949d;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 750px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-info {
+        display: none;
+    }
+
+    .heading h1 {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 430px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .brand h2 {
+        font-size: 16px;
+    }
+
+    .brand p {
+        font-size: 9px;
+    }
+}
+
+/* PRINT */
+@media print {
+    body {
+        background: white;
+    }
+
+    .navbar,
+    .heading,
+    .form-card,
+    .footer,
+    .print-btn {
+        display: none !important;
+    }
+
+    .container {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .dashboard {
+        display: block;
+    }
+
+    .preview-card {
+        box-shadow: none;
+        border: none;
+    }
+
+    .preview {
+        background: white;
+        border: 1px solid #ddd;
+    }
+}
